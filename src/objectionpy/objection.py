@@ -1115,7 +1115,7 @@ def _loadJSONFrame(
             ),
             color=frames.Color(frameDict["frameFades"][0]["color"]) if "color" in frameDict["frameFades"][0] and type(frameDict["frameFades"][0]["color"]) is str else None,
         )
-        if frameDict["frameFades"] and len(frameDict["frameFades"]) > 0
+        if "frameFades" in frameDict and len(frameDict["frameFades"]) > 0
         else None,
         filter=frames.Filter(
             type=_getEnumByValue(
